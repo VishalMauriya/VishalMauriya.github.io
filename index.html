@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vishal Mauriya</title>
+<link rel="stylesheet" href="style.css">
+<style type="text/css">
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.main-container {
+  padding: 30px;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  font-weight: 600;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardz {
+  margin: 20px;
+  padding: 20px;
+  width: 900px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.cardz:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+.card-2 {
+  background: radial-gradient(#fbc1cc, #fa99b2);
+}
+
+.card-3 {
+  background: radial-gradient(#76b2fe, #b69efe);
+}
+
+.card-4 {
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-5 {
+  background: radial-gradient(#f588d8, #c0a3e5);
+}
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+</style>
+<style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .container .card {
+  position: relative;
+  min-width: 320px;
+  height: 340px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 10px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+</style>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Vishal Mauriya</a>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#projects"><button type="button" class="btn btn-outline-primary">Projects</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/vishal-mauriya/overlay/1635490545032/single-media-viewer/">
+          <button type="button" class="btn btn-outline-dark">Resume</button></a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<br><br><br>
+<!-- Profile-->
+<center>
+<div class="min-h-screen w-full bg-gray-300">
+  <div class="max-w-screen-md mx-auto px-10 pt-20">
+    <div class="bg-white md:h-48 rounded-lg shadow-md flex flex-wrap flex-col-reverse md:flex-col">
+      <div class="w-full md:w-1/2 p-4">
+        <img src="images/download.png" width="80" height="80" alt="" class="w-8">
+       <p> <h4>Hey, this is <h2 style="color:red">Vishal Mauriya</h2></h4></p>
+        <p>Software Developer</p>
+      </div>
+    </div>
+  </div>
+</div>
+ </center>
+ <br><br><br>
+ <!-- Experience Card -->
+<div class="main-container">
+  <div class="heading">
+    <div class="h1 text-center text-dark" id="pageHeaderTitle">Experience</div>
+  </div>
+  <div class="cards">
+    <div class="cardz card-1">
+      <h2 class="heading__title">Microsoft-Future Ready Talent</h2><br>
+    <p class="heading__credits">Virtual Intern (4 weeks)</p>
+      <p>~Application Build and Deploy(Live) it on azure web services, Provide Google and mail login authentication.<br>
+      ~Interact with Various Databases like MongoDB, Firebase with Login authentication. implement with the help of Documentations.<br>
+      <p style="color:#034E85">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Java, Html, CSS, MongoDB, Firebase, JDBC, Microsoft Azure App Services.</p> 
+</p>
+      <p class="card__apply">
+        <a class="card__link" href="https://github.com/VishalMauriya/Expenseo-Project">Code</a><a class="card__link" href="https://www.linkedin.com/in/vishal-mauriya/overlay/1635490523620/single-media-viewer/" style="color:red">&nbsp&nbsp&nbspCertificate</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+ <!-- Skills Card -->
+ <center>
+ <div class="h1 text-center text-dark" id="pageHeaderTitle">Skills</div>
+ <div class="container">
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h2>01</h2>
+        <h3>Languages</h3>
+        <p>Java</p>
+        <p>Html5</p>
+        <p>CSS3</p>
+        <p>Solidity</p>
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h2>02</h2>
+        <h3>Databases</h3>
+        <p> </p>
+        <p>Firebase</p>
+        <p>MongoDB</p>
+        <p>SQL</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <h2>03</h2>
+        <h3>Frameworks</h3>
+        <p>SpringBoot</p>
+        <p>Github</p>
+        <p>Git</p>
+      </div>
+    </div>
+  </div>
+</div></center>
+
+<!-- Projects Card -->
+<section id="projects" class="light">
+	<div class="containers py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Projects</div>
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="https://github.com/VishalMauriya/WhatsClone">
+				<img class="postcard__img" src="images/whats.png" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="https://github.com/VishalMauriya/WhatsClone">WhatsClone</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Android App : Java, Libraries, dependencies, Firebase, Android Studio IDE
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+				<ul>
+				  <li>Worked on features of Whatsapp Android Application with self integration of google login.</li>
+				  <li>Firebase storage used for uploading profile pics.</li>
+				</ul></div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Java</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>Firebase</li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>Android Studio IDE</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="https://github.com/VishalMauriya/NewsIndia-App">
+				<img class="postcard__img" src="images/nws.png" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="https://github.com/VishalMauriya/NewsIndia-App">NewsIndia</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>WebApp : Java, newsAPI, Libraries, dependencies, Eclipse IDE
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+				<ul>
+				  <li>Fetching live news data from newsAPI & show news in descriptive way.</li>
+				  <li>Provided with features of searching news, Country wise news results, Categorical News.</li>
+				</ul></div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Java</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>NewsAPI</li>
+					<li class="tag__item play red">
+						<a href="#"><i class="fas fa-play mr-2"></i>Eclipse</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="https://github.com/VishalMauriya/Covid-19_Live-Tracking_Android_Project">
+				<img class="postcard__img" src="images/covidimg.png" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="https://github.com/VishalMauriya/Covid-19_Live-Tracking_Android_Project">Covid-19 Live Tracker</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Android App : Java, APIs Calls, Android Studio, PostMan, Android Studio IDE
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+				<ul>
+				  <li>Worked on an Android Application, added hospitals, vaccination booking feature, email facility, government helpline number Support.</li>
+				  <li>Collaborative project with College Mates.</li>
+				</ul></div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Java</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>API's</li>
+					<li class="tag__item play green">
+						<a href="#"><i class="fas fa-play mr-2"></i>Android Studio</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<!-- <article class="postcard light yellow">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play yellow">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+					</li>
+				</ul>
+			</div>
+		</article> -->
+	</div>
+</section>
+<br><br><br>
+<!-- Education Card -->
+<div class="h1 text-center text-dark" id="pageHeaderTitle">Education</div><br><br>
+<div>
+  <!-- these radio buttons hold state of which card is in front and which toggle button is visible -->
+  <input type="radio" name="sushi-lunch" id="happy-radio">
+  <input type="radio" name="sushi-lunch" id="lovers-radio" checked>
+
+  <div class="selector">
+    <label for="happy-radio" class="happy-card">
+      <h1>Schooling</h1>
+      <ul>
+        <li>From Shri harkrishan Sahib Public Sr. Sec. School, LDH</li>
+        <li>Passed with 83%</li>
+        <li>Annual Sports day Game Winner</li>
+      </ul>
+      <h5>2019 Passout</h5>
+    </label>
+
+    <label for="lovers-radio" class="lovers-card">
+      <h1>Degree</h1>
+      <ul>
+        <li>From Guru Nanak Dev Engineering College, LDH</li>
+        <li>Currently Pursuing BTECH in InformationTechnology</li>
+        <li>Average GPA - 8.3</li>
+      </ul>
+      <h5>2019 - 2023</h5>
+    </label>
+    
+    <label for="happy-radio" class="happy-pick">Change</label>
+    <label for="lovers-radio" class="lovers-pick">Change</label>
+  </div>
+</div>
+ 
+ <!-- Social Icons -->   
+<div id="social-platforms">
+<h1>Connect with My Network</h1>
+
+<a class="btns btn-icon btn-github" href="https://github.com/VishalMauriya"><i class="fa fa-github"></i><span>Github</span></a>
+<a class="btns btn-icon btn-googleplus" href="mailto:vishalm7973@gmail.com"><i class="fa fa-envelope"></i><span>Email</span></a>
+<a class="btns btn-icon btn-linkedin" href="https://www.linkedin.com/in/vishal-mauriya/"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+<a class="btns btn-icon btn-code" href="https://leetcode.com/VishalMauriya/"><i class="fa fa-code"></i><span>Leetcode</span></a>
+</div>
+
+  <!-- Footer -->
+  <br><br><br><br><br>
+ <div class="footer-light">
+        <footer style="align-content: bottom">
+         <p style="align-content: bottom" class="copyright">Vishal Mauriya &copy; <script>document.write(new Date().getFullYear())</script></p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+       
+</body>
+</html>
