@@ -311,14 +311,6 @@ a, a:hover {
     background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
   }
 }   
-*/
-
-
-
-
-
-
-
 
 .contact-form{ margin-top:15px;}
 .contact-form .textarea{ min-height:220px; resize:none;}
@@ -330,4 +322,46 @@ a, a:hover {
 .form-control-feedback {
 line-height: 50px;
 top: 0px;
+}
+
+
+
+
+.user-image{
+	padding: 1em 0;
+	background-image: linear-gradient(70deg,#323233,#323233);
+}
+
+.user-image img{
+	width: 5em;
+	height: 5em;
+	border-radius: 50%;
+	box-shadow: 0 0.6em 1.8em ;
+	object-fit: cover;
+}
+
+.content{
+	color: #565656;
+	padding: 1.2em;
+}
+
+ .name{
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+.username{
+	font-size: 1em;
+	color: #9e9e9e;
+}
+
+.cont{
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+  padding: 1.2em;
+	overflow: hidden;
+	border-radius: 1em;
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1em;
 }
